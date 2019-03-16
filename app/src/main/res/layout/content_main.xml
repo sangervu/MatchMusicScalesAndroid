@@ -2,19 +2,88 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/IntervalFirst"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
+    tools:layout_margin="5dp"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:id="@+id/Intervalli1"
+        android:layout_width="386dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@+id/radioButton12"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/ensimm_inen_intervalli"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/IntervalFirst"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_width="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="391dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:clickable="true"
+                android:focusable="auto"
+                android:text="@string/w"
+                android:textSize="24sp"
+                tools:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                android:layout_width="94dp"
+                android:layout_height="67dp"
+                android:checked="false"
+                android:clickable="true"
+                android:focusable="auto"
+                android:text="@string/h"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="auto"
+                android:text="@string/m"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:text="@string/M"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
