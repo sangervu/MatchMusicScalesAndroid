@@ -15,10 +15,10 @@
         android:id="@+id/Intervalli1"
         android:layout_width="386dp"
         android:layout_height="137dp"
-        android:layout_marginTop="8dp"
         android:checkedButton="@+id/radioButton12"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -52,7 +52,7 @@
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
-                android:focusable="auto"
+                android:focusable="true"
                 android:text="@string/w"
                 android:textSize="24sp"
                 tools:layout_height="match_parent" />
@@ -60,10 +60,10 @@
             <RadioButton
                 android:id="@+id/radioButton12"
                 android:layout_width="94dp"
-                android:layout_height="67dp"
+                android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
-                android:focusable="auto"
+                android:focusable="true"
                 android:text="@string/h"
                 android:textSize="24sp" />
 
@@ -71,8 +71,9 @@
                 android:id="@+id/radioButton13"
                 android:layout_width="105dp"
                 android:layout_height="match_parent"
+                android:checked="false"
                 android:clickable="true"
-                android:focusable="auto"
+                android:focusable="true"
                 android:text="@string/m"
                 android:textSize="24sp" />
 
@@ -80,7 +81,9 @@
                 android:id="@+id/radioButton14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:checked="false"
                 android:clickable="true"
+                android:focusable="true"
                 android:text="@string/M"
                 android:textSize="24sp" />
         </LinearLayout>
