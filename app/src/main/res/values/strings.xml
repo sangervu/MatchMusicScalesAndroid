@@ -6,4 +6,6 @@
     <string name="m">m</string>
     <string name="M">M</string>
     <string name="ensimm_inen_intervalli">Ensimmäinen Intervalli</string>
+    <string name="toinen_intervalli">Toinen intervalli</string>
+    <string name="kolmas_intervalli">Kolmas intervalli</string>
 </resources>
