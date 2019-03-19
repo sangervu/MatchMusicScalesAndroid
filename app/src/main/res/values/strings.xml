@@ -5,7 +5,11 @@
     <string name="h">H</string>
     <string name="m">m</string>
     <string name="M">M</string>
-    <string name="ensimm_inen_intervalli">Ensimmäinen Intervalli</string>
+
     <string name="toinen_intervalli">Toinen intervalli</string>
     <string name="kolmas_intervalli">Kolmas intervalli</string>
+    <string name="neljas_intervalli">Neljäs intervalli</string>
+    <string name="viides_intervalli">Viides intervalli</string>
+    <string name="ensimmainen_intervalli">Ensimmäinen intervalli</string>
+    <string name="viides_intervalli">Viides intervalli</string>
 </resources>
