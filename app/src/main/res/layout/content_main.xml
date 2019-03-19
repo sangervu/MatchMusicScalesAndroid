@@ -11,16 +11,6 @@
     tools:layout_margin="5dp"
     tools:showIn="@layout/activity_main">
 
-<<<<<<< HEAD
-    <RadioGroup
-        android:id="@+id/Intervalli1"
-        android:layout_width="386dp"
-        android:layout_height="137dp"
-        android:checkedButton="@+id/radioButton12"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-=======
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -31,7 +21,6 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
->>>>>>> 8006ed9beb9dd688f6d08212350e015e3e6be632
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -66,10 +55,7 @@
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
-<<<<<<< HEAD
-=======
                 android:duplicateParentState="false"
->>>>>>> 8006ed9beb9dd688f6d08212350e015e3e6be632
                 android:focusable="true"
                 android:text="@string/w"
                 android:textSize="24sp"
@@ -77,11 +63,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton12"
-<<<<<<< HEAD
-                android:layout_width="94dp"
-=======
                 android:layout_width="90dp"
->>>>>>> 8006ed9beb9dd688f6d08212350e015e3e6be632
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
@@ -94,7 +76,6 @@
                 android:id="@+id/radioButton13"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/m"
@@ -241,8 +222,6 @@
                 android:checked="false"
                 android:clickable="true"
                 android:focusable="true"
-<<<<<<< HEAD
-=======
                 android:text="@string/w"
                 android:textSize="24sp"
                 tools:layout_height="match_parent" />
@@ -273,7 +252,6 @@
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
->>>>>>> 8006ed9beb9dd688f6d08212350e015e3e6be632
                 android:text="@string/M"
                 android:textSize="24sp" />
 
