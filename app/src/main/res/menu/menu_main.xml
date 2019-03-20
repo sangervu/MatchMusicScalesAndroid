@@ -3,8 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.matchmusicscales.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_pentatonic"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_pentatonic"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_hexatonic"
+        android:orderInCategory="100"
+        android:title="@string/action_hexatonic"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_heptatonic"
+        android:orderInCategory="100"
+        android:title="@string/action_heptatonic"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_octatonic"
+        android:orderInCategory="100"
+        android:title="@string/action_octatonic"
         app:showAsAction="never" />
 </menu>
