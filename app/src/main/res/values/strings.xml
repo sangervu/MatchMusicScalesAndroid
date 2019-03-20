@@ -9,10 +9,10 @@
     <string name="m">m</string>
     <string name="M">M</string>
 
-    <string name="ensimmainen_intervalli">Ensimmäinen intervalli</string>
-    <string name="toinen_intervalli">Toinen intervalli</string>
-    <string name="kolmas_intervalli">Kolmas intervalli</string>
-    <string name="neljas_intervalli">Neljäs intervalli</string>
-    <string name="viides_intervalli">Viides intervalli</string>
-    <string name="kuudes_intervalli">Kuudes intervalli</string>
+    <string name="ensimmainen_intervalli">First interval</string>
+    <string name="toinen_intervalli">Second interval</string>
+    <string name="kolmas_intervalli">Third interval</string>
+    <string name="neljas_intervalli">Fourth interval</string>
+    <string name="viides_intervalli">Fifth interval</string>
+    <string name="kuudes_intervalli">Sixth interval</string>
 </resources>
