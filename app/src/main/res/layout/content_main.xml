@@ -83,7 +83,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton14"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -164,7 +164,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton24"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -248,7 +248,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton34"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -329,7 +329,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton44"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -413,7 +413,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton54"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -495,7 +495,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton64"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
