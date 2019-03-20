@@ -43,9 +43,25 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_pentatonic) {
             return true;
         }
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_octatonic) {
+            return true;
+        }
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_heptatonic) {
+            return true;
+        }
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_octatonic) {
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
