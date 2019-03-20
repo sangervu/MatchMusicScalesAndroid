@@ -359,12 +359,12 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
+
             android:layout_marginTop="8dp"
-=======
+
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
->>>>>>> db59ff4d408bd99ba5e7ced0160d2769fe700ca7
+
             android:layout_weight="1"
             android:paddingBottom="0dp"
             android:text="@string/viides_intervalli"
