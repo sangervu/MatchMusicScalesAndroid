@@ -17,19 +17,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:text="@string/ensimmainen_intervalli"
             android:textSize="32sp"
             app:layout_constraintTop_toTopOf="parent"
@@ -84,7 +84,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton14"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -110,8 +110,8 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:text="@string/toinen_intervalli"
             android:textSize="32sp"
             app:layout_constraintTop_toTopOf="parent"
@@ -145,7 +145,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton22"
-                android:layout_width="94dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
@@ -165,7 +165,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton24"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -192,8 +192,8 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:layout_weight="1"
             android:text="@string/kolmas_intervalli"
             android:textSize="32sp"
@@ -229,7 +229,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton32"
-                android:layout_width="94dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
@@ -249,7 +249,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton34"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -274,7 +274,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             android:layout_weight="1"
             android:text="@string/neljas_intervalli"
             android:textSize="32sp"
@@ -310,7 +310,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton42"
-                android:layout_width="94dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
@@ -330,7 +330,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton44"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -347,19 +347,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
-        android:layout_marginBottom="160dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.09">
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginTop="8dp"
+=======
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+>>>>>>> db59ff4d408bd99ba5e7ced0160d2769fe700ca7
             android:layout_weight="1"
+            android:paddingBottom="0dp"
             android:text="@string/viides_intervalli"
             android:textSize="32sp"
             app:layout_constraintTop_toTopOf="parent"
@@ -394,7 +401,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton52"
-                android:layout_width="94dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
@@ -414,7 +421,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton54"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -440,7 +447,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             android:layout_weight="1"
             android:text="@string/kuudes_intervalli"
             android:textSize="32sp"
@@ -476,7 +483,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton62"
-                android:layout_width="94dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:checked="false"
                 android:clickable="true"
@@ -496,7 +503,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton64"
-                android:layout_width="109dp"
+                android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
