@@ -56,7 +56,7 @@
                 android:id="@+id/radioButton11"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:duplicateParentState="false"
                 android:focusable="true"
@@ -142,7 +142,7 @@
                 android:id="@+id/radioButton21"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/w"
@@ -226,7 +226,7 @@
                 android:id="@+id/radioButton31"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/w"
@@ -442,6 +442,7 @@
         android:layout_marginTop="10dp"
         android:fadingEdge="none"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/LinearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
@@ -507,6 +508,91 @@
 
             <RadioButton
                 android:id="@+id/radioButton64"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/M"
+                android:textSize="24sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/seventh_intervalli"
+            android:textSize="32sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_width="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/Intervalli7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:checkedButton="@+id/radioButton12"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButton71"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/w"
+                android:textSize="24sp"
+                tools:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/radioButton72"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:clickable="true"
+                android:duplicateParentState="false"
+                android:focusable="true"
+                android:text="@string/h"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton73"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/m"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton74"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:clickable="true"
