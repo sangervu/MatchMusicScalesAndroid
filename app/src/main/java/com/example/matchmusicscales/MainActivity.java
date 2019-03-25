@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_octatonic) {
+        if (id == R.id.action_hexatonic) {
             return true;
         }
 
