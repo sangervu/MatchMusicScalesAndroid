@@ -35,21 +35,33 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_pentatonic) {
+
+            setContentView(R.layout.pentatonic_scales);
+
             return true;
         }
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_octatonic) {
+        if (id == R.id.action_hexatonic) {
+
+            setContentView(R.layout.hextatonic_scales);
+
             return true;
         }
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_heptatonic) {
+
+            setContentView(R.layout.heptatonic_scales);
+
             return true;
         }
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_octatonic) {
+
+            setContentView(R.layout.octatonic_scales);
+
             return true;
         }
 
