@@ -16,4 +16,5 @@
     <string name="viides_intervalli">Fifth interval</string>
     <string name="kuudes_intervalli">Sixth interval</string>
     <string name="seventh_intervalli">Seventh interval</string>
+    <string name="back_to_main_view">Back to Main View</string>
 </resources>
