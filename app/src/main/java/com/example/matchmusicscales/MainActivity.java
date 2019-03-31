@@ -43,9 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_hexatonic) {
+<<<<<<< HEAD
 
             setContentView(R.layout.hextatonic_scales);
 
+=======
+>>>>>>> 21589b916db1491d877791701aefdc4daca21cf7
             return true;
         }
 
