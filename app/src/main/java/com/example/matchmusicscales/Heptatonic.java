@@ -7,15 +7,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class Pentatonic extends Activity {
+public class Heptatonic extends Activity {
 
     @Override
-    public void onCreate(Bundle pentatonic) {
-        setContentView(R.layout.pentatonic_scales);
+    public void onCreate(Bundle heptatonic) {
+        setContentView(R.layout.heptatonic_scales);
 
-        super.onCreate(pentatonic);
+        super.onCreate(heptatonic);
 
-        Button button = (Button)findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(buttonClicked);
     }
 
@@ -23,12 +23,9 @@ public class Pentatonic extends Activity {
         @Override
         public void onClick(View v) {
 
-            Intent main = new Intent(Pentatonic.this, MainActivity.class);
+            Intent main = new Intent(Heptatonic.this, MainActivity.class);
             startActivity(main);
 
         }
     };
-
 }
-
-

@@ -17,4 +17,8 @@
     <string name="kuudes_intervalli">Sixth interval</string>
     <string name="seventh_intervalli">Seventh interval</string>
     <string name="back_to_main_view">Back to Main View</string>
+    <string name="pentatonic_scales">Pentatonic Scales</string>
+    <string name="hexatonic_scales">Hexatonic Scales</string>
+    <string name="heptatonic_scales">Heptatonic Scales</string>
+    <string name="octatonic_scales">Octatonic Scales</string>
 </resources>
