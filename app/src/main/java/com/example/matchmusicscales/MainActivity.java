@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        inputIntervals = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7 + 'H';
+        inputIntervals = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
 
     }
 
@@ -142,10 +142,11 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.show_scales) {
             getRadioButtons();
+            findIntervals = new FindIntervals(inputIntervals);
             //setContentView(R.layout.pentatonic_scales);
             Intent scales = new Intent(MainActivity.this, OctatonicView.class);
             startActivity(scales);
-            findIntervals = new FindIntervals(inputIntervals);
+
             return true;
         }
 
