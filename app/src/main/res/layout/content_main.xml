@@ -16,8 +16,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -40,7 +39,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli1"
+            android:id="@+id/IntervalGroup_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -126,7 +125,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli2"
+            android:id="@+id/IntervalGroup_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -143,7 +142,7 @@
                 android:id="@+id/radioButton21"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="true"
+                android:checked="false"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/w"
@@ -154,7 +153,7 @@
                 android:id="@+id/radioButton22"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:duplicateParentState="false"
                 android:focusable="true"
@@ -211,7 +210,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli3"
+            android:id="@+id/IntervalGroup_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
@@ -296,7 +295,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli4"
+            android:id="@+id/IntervalGroup_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -325,7 +324,7 @@
                 android:id="@+id/radioButton42"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:duplicateParentState="false"
                 android:focusable="true"
@@ -383,7 +382,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli5"
+            android:id="@+id/IntervalGroup_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -401,7 +400,7 @@
                 android:id="@+id/radioButton51"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/w"
@@ -470,7 +469,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli6"
+            android:id="@+id/IntervalGroup_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -499,7 +498,7 @@
                 android:id="@+id/radioButton62"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:duplicateParentState="false"
                 android:focusable="true"
@@ -556,7 +555,7 @@
             tools:layout_width="wrap_content" />
 
         <RadioGroup
-            android:id="@+id/Intervalli7"
+            android:id="@+id/IntervalGroup_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -574,7 +573,7 @@
                 android:id="@+id/radioButton71"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
-                android:checked="false"
+                android:checked="true"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/w"

@@ -1,18 +1,14 @@
 package com.example.matchmusicscales;
-
-import java.util.HashMap;
-
 /**
  *
  * @author angervuorisa
  */
+
+import java.util.HashMap;
+
 public class MusicScales {
 
-    /**
-     *
-     * @param asteikko
-     * @return
-     */
+
     public String getScales(String asteikko) {
 
         HashMap<String, String> points = new HashMap<String, String>();

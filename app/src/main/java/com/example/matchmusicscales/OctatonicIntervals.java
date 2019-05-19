@@ -1,40 +1,10 @@
 package com.example.matchmusicscales;
 
-/*
- * @author angervuorisa
- */
-
 import java.util.Arrays;
-import java.util.LinkedHashSet;
 import java.util.Collections;
+import java.util.LinkedHashSet;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-
-public class Octatonic extends Activity {
-
-    @Override
-    public void onCreate(Bundle octatonic) {
-        setContentView(R.layout.octatonic_scales);
-
-        super.onCreate(octatonic);
-
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(buttonClicked);
-    }
-
-    OnClickListener buttonClicked = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-            Intent main = new Intent(Octatonic.this, MainActivity.class);
-            startActivity(main);
-        }
-    };
+public class OctatonicIntervals {
 
     public static LinkedHashSet<String> hashList;
     private String[] octatonicIntervals = new String[8];
@@ -45,21 +15,13 @@ public class Octatonic extends Activity {
     char m = 'm'; // minor 3rd
     char M = 'M'; // Major 3rd
 
-    String stringIntervals;
     static int charCounter = -1;
 
-    /**
-     * @param intervallit
-     */
     public void setOctatonicInterval(String intervallit) {
         charCounter = charCounter + 1;
         octatonicIntervals[charCounter] = intervallit;
     }
 
-    /**
-     * @param intervalCount
-     * @return
-     */
     public String[] getAllOctatonicIntervals(String intervalCount) {
 
         switch (intervalCount) {

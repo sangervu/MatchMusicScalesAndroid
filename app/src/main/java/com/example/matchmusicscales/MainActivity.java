@@ -1,23 +1,129 @@
 package com.example.matchmusicscales;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
+
+    FindIntervals findIntervals;
+
+    private String inputIntervals;
+
+    private String interval_1;
+    private String interval_2;
+    private String interval_3;
+    private String interval_4;
+    private String interval_5;
+    private String interval_6;
+    private String interval_7;
+
+    private RadioGroup intervalsGroup_1;
+    private RadioGroup intervalsGroup_2;
+    private RadioGroup intervalsGroup_3;
+    private RadioGroup intervalsGroup_4;
+    private RadioGroup intervalsGroup_5;
+    private RadioGroup intervalsGroup_6;
+    private RadioGroup intervalsGroup_7;
+
+    private RadioButton intervalsButton_1;
+    private RadioButton intervalsButton_2;
+    private RadioButton intervalsButton_3;
+    private RadioButton intervalsButton_4;
+    private RadioButton intervalsButton_5;
+    private RadioButton intervalsButton_6;
+    private RadioButton intervalsButton_7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
 
-    ;
+    protected void getRadioButtons() {
+
+        intervalsGroup_1 = (RadioGroup) findViewById(R.id.IntervalGroup_1);
+        intervalsGroup_2 = (RadioGroup) findViewById(R.id.IntervalGroup_2);
+        intervalsGroup_3 = (RadioGroup) findViewById(R.id.IntervalGroup_3);
+        intervalsGroup_4 = (RadioGroup) findViewById(R.id.IntervalGroup_4);
+        intervalsGroup_5 = (RadioGroup) findViewById(R.id.IntervalGroup_5);
+        intervalsGroup_6 = (RadioGroup) findViewById(R.id.IntervalGroup_6);
+        intervalsGroup_7 = (RadioGroup) findViewById(R.id.IntervalGroup_7);
+
+        // get selected radio button from intervalsGroup
+        int selectedId_1 = intervalsGroup_1.getCheckedRadioButtonId();
+        int selectedId_2 = intervalsGroup_2.getCheckedRadioButtonId();
+        int selectedId_3 = intervalsGroup_3.getCheckedRadioButtonId();
+        int selectedId_4 = intervalsGroup_4.getCheckedRadioButtonId();
+        int selectedId_5 = intervalsGroup_5.getCheckedRadioButtonId();
+        int selectedId_6 = intervalsGroup_6.getCheckedRadioButtonId();
+        int selectedId_7 = intervalsGroup_7.getCheckedRadioButtonId();
+
+        // find the radiobutton by returned id
+        intervalsButton_1 = (RadioButton) findViewById(selectedId_1);
+        intervalsButton_2 = (RadioButton) findViewById(selectedId_2);
+        intervalsButton_3 = (RadioButton) findViewById(selectedId_3);
+
+        interval_1 = intervalsButton_1.getText().toString();
+        interval_2 = intervalsButton_2.getText().toString();
+        interval_3 = intervalsButton_3.getText().toString();
+
+
+        // buttons 4, 5,6 and 7 must be tapped in this order. Otherwise they must be cleared
+        if (selectedId_4 == -1) {
+            interval_4 = "";
+
+        } else {
+            intervalsButton_4 = (RadioButton) findViewById(selectedId_4);
+            interval_4 = intervalsButton_4.getText().toString();
+        }
+
+        if (selectedId_5 == -1) {
+            interval_5 = "";
+        } else {
+            intervalsButton_5 = (RadioButton) findViewById(selectedId_5);
+            interval_5 = intervalsButton_5.getText().toString();
+
+            if (selectedId_4 == -1) {
+                RadioGroup radioGroup_5 = (RadioGroup) findViewById(R.id.IntervalGroup_5);
+                radioGroup_5.clearCheck();
+                interval_5 = "";
+            }
+        }
+
+        if (selectedId_6 == -1) {
+            interval_6 = "";
+        } else {
+            intervalsButton_6 = (RadioButton) findViewById(selectedId_6);
+            interval_6 = intervalsButton_6.getText().toString();
+
+            if (selectedId_4 == -1 || selectedId_5 == -1) {
+                RadioGroup radioGroup_6 = (RadioGroup) findViewById(R.id.IntervalGroup_6);
+                radioGroup_6.clearCheck();
+                interval_6 = "";
+            }
+        }
+
+        if (selectedId_7 == -1) {
+            interval_7 = "";
+        } else {
+            intervalsButton_7 = (RadioButton) findViewById(selectedId_7);
+            interval_7 = intervalsButton_7.getText().toString();
+
+            if (selectedId_4 == -1 || selectedId_5 == -1 || selectedId_6 == -1) {
+                RadioGroup radioGroup_7 = (RadioGroup) findViewById(R.id.IntervalGroup_7);
+                radioGroup_7.clearCheck();
+                interval_7 = "";
+            }
+        }
+
+        inputIntervals = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7 + 'H';
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -34,45 +140,35 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_pentatonic) {
-
+        if (id == R.id.show_scales) {
+            getRadioButtons();
             //setContentView(R.layout.pentatonic_scales);
-            Intent pentatonic = new Intent(MainActivity.this, Pentatonic.class);
-            startActivity(pentatonic);
+            Intent scales = new Intent(MainActivity.this, OctatonicView.class);
+            startActivity(scales);
+            findIntervals = new FindIntervals(inputIntervals);
             return true;
         }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_hexatonic) {
+        if (id == R.id.clear_intervals) {
 
-            //setContentView(R.layout.hextatonic_scales);
-            Intent hexatonic = new Intent(MainActivity.this, Hexatonic.class);
-            startActivity(hexatonic);
+            RadioGroup radioGroup_4 = (RadioGroup) findViewById(R.id.IntervalGroup_4);
+            RadioGroup radioGroup_5 = (RadioGroup) findViewById(R.id.IntervalGroup_5);
+            RadioGroup radioGroup_6 = (RadioGroup) findViewById(R.id.IntervalGroup_6);
+            RadioGroup radioGroup_7 = (RadioGroup) findViewById(R.id.IntervalGroup_7);
 
-            return true;
-        }
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_heptatonic) {
-
-            //setContentView(R.layout.heptatonic_scales);
-            Intent heptatonic = new Intent(MainActivity.this, Heptatonic.class);
-            startActivity(heptatonic);
+            radioGroup_4.clearCheck();
+            radioGroup_5.clearCheck();
+            radioGroup_6.clearCheck();
+            radioGroup_7.clearCheck();
 
             return true;
         }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_octatonic) {
-
-            //setContentView(R.layout.octatonic_scales);
-            Intent octatonic = new Intent(MainActivity.this, Octatonic.class);
-            startActivity(octatonic);
-
-            return true;
-        }
         return super.onOptionsItemSelected(item);
+
     }
 
-
 }
+
+   /*Toast.makeText(MainActivity.this,
+                String.valueOf(selectedId_4), Toast.LENGTH_SHORT).show();*/

@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">MatchMusicScales</string>
+    <string name="app_name">Intervals and Scales</string>
+    <string name="octa_name">Octatonic Scales</string>
+    <string name="hepta_name">Heptatonic Scales</string>
+    <string name="hexa_name">Hexatonic Scales</string>
+    <string name="pent_name">Octatonic Scales</string>
+
     <string name="action_pentatonic">Pentatonic Scales</string>
     <string name="action_hexatonic">Hexatonic Scales</string>
     <string name="action_heptatonic">Heptatonic Scales</string>
@@ -21,4 +26,6 @@
     <string name="hexatonic_scales">Hexatonic Scales</string>
     <string name="heptatonic_scales">Heptatonic Scales</string>
     <string name="octatonic_scales">Octatonic Scales</string>
+    <string name="show_scales">Show Scales</string>
+    <string name="clear_intervals">Clear Inrevals</string>
 </resources>
