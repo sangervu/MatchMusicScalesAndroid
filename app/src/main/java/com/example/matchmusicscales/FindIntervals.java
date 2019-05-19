@@ -11,7 +11,7 @@ public class FindIntervals {
         char m = 'm'; // minor 3rd
         char M = 'M'; // Major 3rd
 
-        MusicScales scales = new MusicScales();
+        //MusicScales scales = new MusicScales();
         //PentatonicIntervals pentatonic = new PentatonicIntervals();
         //HexatonicIntervals hexatonic = new HexatonicIntervals();
         //HeptatonicIntervals heptatonic = new HeptatonicIntervals();
@@ -28,15 +28,10 @@ public class FindIntervals {
             case 3: // annettu kolme intervallia
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
-                        System.out.println("intervalleja ei tunnistettu");
-                        System.exit(i);
-                    } else {
-                        //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    }
+                    //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 /*
                 //Pentatoniset asteikot
@@ -92,15 +87,10 @@ public class FindIntervals {
             case 4: // annettu neljä intervallia (OK)
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
-                        System.out.println("intervalleja ei tunnistettu");
-                        System.exit(i);
-                    } else {
-                        //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    }
+                    //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 /*
                 //Pentatoniset asteikot
@@ -157,15 +147,10 @@ public class FindIntervals {
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
-                        System.out.println("intervalleja ei tunnistettu");
-                        System.exit(i);
-                    } else {
-                        //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    }
+                    //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 /*
                 //Pentatoniset asteikot
@@ -222,14 +207,9 @@ public class FindIntervals {
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
-                        System.out.println("intervalleja ei tunnistettu");
-                        System.exit(i);
-                    } else {
-                        //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    }
+                    //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 /*
                 //Hexatoniset asteikot
@@ -274,14 +254,8 @@ public class FindIntervals {
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    if ((intervallit.charAt(i) != W) && (intervallit.charAt(i) != H) && (intervallit.charAt(i) != m) && (intervallit.charAt(i) != M)) {
-                        System.out.println("intervalleja ei tunnistettu");
-                        System.exit(i);
-                    } else {
-
-                        //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                        octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    }
+                    //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 /*
                 // Heptatoniset asteikeot

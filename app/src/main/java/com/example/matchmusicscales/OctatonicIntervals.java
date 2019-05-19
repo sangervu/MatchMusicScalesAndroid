@@ -26,7 +26,7 @@ public class OctatonicIntervals {
 
         switch (intervalCount) {
 
-            case "3": //Kolme intevallia syötetty (OK)
+            case "3": //Kolme intevallia syötetty
 
                 switch (octatonicIntervals[2]) {
 
@@ -60,7 +60,7 @@ public class OctatonicIntervals {
                 octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
-            case "4": //Neljä intervallia syötetty (OK)
+            case "4": //Neljä intervallia syötetty
 
                 switch (octatonicIntervals[3]) {
 
@@ -90,7 +90,7 @@ public class OctatonicIntervals {
                 octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
 
                 break;
-            case "5": //Viisi intervallia syötetty (OK)
+            case "5": //Viisi intervallia syötetty
                 switch (octatonicIntervals[4]) {
 
                     case "W":
@@ -116,7 +116,7 @@ public class OctatonicIntervals {
                 octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
-            case "6": //Kuusi intervallia syötetty (OK)
+            case "6": //Kuusi intervallia syötetty
                 switch (octatonicIntervals[5]) {
                     case "H":
                         octatonicIntervals[6] = String.valueOf(W);
@@ -138,7 +138,7 @@ public class OctatonicIntervals {
                 octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
-            case "7": //Seitsemän intervallia syötetty (OK)
+            case "7": //Seitsemän intervallia syötetty
                 switch (octatonicIntervals[6]) {
                     case "W":
                         octatonicIntervals[7] = String.valueOf(H);
@@ -158,7 +158,7 @@ public class OctatonicIntervals {
                 octatonicIntervalsAll[2] = String.join("", octatonicIntervals);
                 break;
 
-            case "8": //Kahdeksan intervallia syötetty (OK)
+            case "8": //Kahdeksan intervallia syötetty
                 for (int i = 0; i <= 1; i++) {
                     //"rotate" the intervals Array
                     Collections.rotate(Arrays.asList(octatonicIntervals), 1);
