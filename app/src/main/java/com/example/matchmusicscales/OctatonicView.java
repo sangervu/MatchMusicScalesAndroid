@@ -2,6 +2,7 @@ package com.example.matchmusicscales;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,7 +13,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class OctatonicView extends ListActivity {
 
-    String scales[] = FindIntervals.myIntervalsCleanedOcta;
+    String scales[] = FindIntervals.myIntervalsCleanedOcta7;
 
     MusicScales scale = new MusicScales();
 

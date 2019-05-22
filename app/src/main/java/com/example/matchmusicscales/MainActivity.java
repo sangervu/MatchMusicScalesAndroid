@@ -3,6 +3,7 @@ package com.example.matchmusicscales;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbarMain = findViewById(R.id.toolbarMain);
+        setSupportActionBar(toolbarMain);
     }
 
     protected void getRadioButtons() {
@@ -121,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        inputIntervals = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7 + 'W';
+        this.inputIntervals = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
 
     }
 
@@ -143,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.show_scales) {
             getRadioButtons();
             findIntervals = new FindIntervals(inputIntervals);
-            //setContentView(R.layout.pentatonic_scales);
             Intent scales = new Intent(MainActivity.this, OctatonicView.class);
             startActivity(scales);
 
@@ -163,6 +166,15 @@ public class MainActivity extends AppCompatActivity {
             radioGroup_7.clearCheck();
 
             return true;
+        }
+
+        if (id == R.id.show_data) {
+
+            Intent showData = new Intent(MainActivity.this, ShowData.class);
+            startActivity(showData);
+
+            return true;
+
         }
 
         return super.onOptionsItemSelected(item);

@@ -28,4 +28,12 @@
     <string name="octatonic_scales">Octatonic Scales</string>
     <string name="show_scales">Show Scales</string>
     <string name="clear_intervals">Clear Intervals</string>
+
+    <string name="show_data">Show Data</string>
+    <string name="textView1">TextView</string>
+    <string name="textView2">TextView</string>
+    <string name="textView3">TextView</string>
+    <string name="textView4">TextView</string>
+    <string name="octatonic_name">Octatonic Scales</string>
+    <string name="dataView_name">Show Internal Data</string>
 </resources>

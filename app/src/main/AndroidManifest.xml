@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.matchmusicscales">
 
     <application
@@ -17,7 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".OctatonicView"
-            android:label="@string/app_name">
+            android:label="@string/octatonic_name">
+        </activity>
+        <activity android:name=".ShowData"
+            android:label="@string/dataView_name">
         </activity>
     </application>
 
