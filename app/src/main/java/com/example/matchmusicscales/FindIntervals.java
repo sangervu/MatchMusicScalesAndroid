@@ -294,7 +294,7 @@ public class FindIntervals {
                 }*/
 
                 break;
-
+                /*
             case 8: // annettu kahdeksan intervallia
 
                 for (int i = 0; i < intervallit.length(); i++) {
@@ -311,9 +311,9 @@ public class FindIntervals {
                 }
                 if (myIntervalsCleanedOcta.length == 0) {
                     System.out.println("N.A.");
-                }*/
+                }
                 break;
-
+                */
         }
     }
 }

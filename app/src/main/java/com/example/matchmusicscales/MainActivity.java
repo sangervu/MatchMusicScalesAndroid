@@ -145,7 +145,16 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.show_scales) {
+        if (id == R.id.show_scales_heptatonic) {
+            getRadioButtons();
+            findIntervals = new FindIntervals(inputIntervals);
+            Intent scales = new Intent(MainActivity.this, HeptatonicView.class);
+            startActivity(scales);
+
+            return true;
+        }
+
+        if (id == R.id.show_scales_octatonic) {
             getRadioButtons();
             findIntervals = new FindIntervals(inputIntervals);
             Intent scales = new Intent(MainActivity.this, OctatonicView.class);

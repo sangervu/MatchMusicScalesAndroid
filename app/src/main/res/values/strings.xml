@@ -36,4 +36,7 @@
     <string name="textView4">TextView</string>
     <string name="octatonic_name">Octatonic Scales</string>
     <string name="dataView_name">Show Internal Data</string>
+    <string name="show_scales_heptatonic">Heptatonic Scales</string>
+    <string name="show_scales_ocatonic">Octatonic Scales</string>
+    <string name="heptatonic_name">Heptatonic Scales</string>
 </resources>

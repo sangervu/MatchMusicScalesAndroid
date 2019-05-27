@@ -20,6 +20,11 @@
         <activity android:name=".OctatonicView"
             android:label="@string/octatonic_name">
         </activity>
+
+        <activity android:name=".HeptatonicView"
+            android:label="@string/heptatonic_name">
+        </activity>
+
         <activity android:name=".ShowData"
             android:label="@string/dataView_name">
         </activity>
