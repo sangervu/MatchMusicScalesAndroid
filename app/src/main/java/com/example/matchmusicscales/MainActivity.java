@@ -8,20 +8,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     FindIntervals findIntervals;
 
-    private String inputIntervals;
+    static String inputIntervals;
 
-    private String interval_1;
-    private String interval_2;
-    private String interval_3;
-    private String interval_4;
-    private String interval_5;
-    private String interval_6;
-    private String interval_7;
+    private String interval_1 = "";
+    private String interval_2 = "";
+    private String interval_3 = "";
+    private String interval_4 = "";
+    private String interval_5 = "";
+    private String interval_6 = "";
+    private String interval_7 = "";
 
     private RadioGroup intervalsGroup_1;
     private RadioGroup intervalsGroup_2;
@@ -169,6 +170,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.show_data) {
+
+            getRadioButtons();
+            findIntervals = new FindIntervals(inputIntervals);
 
             Intent showData = new Intent(MainActivity.this, ShowData.class);
             startActivity(showData);

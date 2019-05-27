@@ -13,7 +13,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class OctatonicView extends ListActivity {
 
-    String scales[] = FindIntervals.myIntervalsCleanedOcta7;
+    String scales[] = FindIntervals.myIntervalsCleanedForOcta;
 
     MusicScales scale = new MusicScales();
 
