@@ -39,4 +39,6 @@
     <string name="show_scales_heptatonic">Heptatonic Scales</string>
     <string name="show_scales_ocatonic">Octatonic Scales</string>
     <string name="heptatonic_name">Heptatonic Scales</string>
+    <string name="show_scales_pentatatonic">Pentatonic Scales</string>
+    <string name="show_scales_hexatonic">Hexatonic Scales</string>
 </resources>

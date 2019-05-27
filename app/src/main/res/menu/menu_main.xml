@@ -2,6 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.matchmusicscales.MainActivity">
+
+    <item
+        android:id="@+id/show_scales_pentatonic"
+        android:orderInCategory="100"
+        android:title="@string/show_scales_pentatatonic" />
+    <item
+        android:id="@+id/show_scales_hexatonic"
+        android:orderInCategory="100"
+        android:title="@string/show_scales_hexatonic" />
     <item
         android:id="@+id/show_scales_heptatonic"
         android:orderInCategory="100"
