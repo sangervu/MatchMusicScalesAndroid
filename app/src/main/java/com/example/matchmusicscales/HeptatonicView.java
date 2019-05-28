@@ -2,7 +2,10 @@ package com.example.matchmusicscales;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.support.v7.app.AppCompatActivity;
+=======
+>>>>>>> 496ff26f588fca0d4efd771669f180cdde5f6a00
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,7 +24,11 @@ public class HeptatonicView extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+<<<<<<< HEAD
         setListAdapter(new ArrayAdapter<String>(this, R.layout.heptatonic_scales,scales));
+=======
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.view_scales,scales));
+>>>>>>> 496ff26f588fca0d4efd771669f180cdde5f6a00
 
         ListView listView = getListView();
         listView.setTextFilterEnabled(true);
