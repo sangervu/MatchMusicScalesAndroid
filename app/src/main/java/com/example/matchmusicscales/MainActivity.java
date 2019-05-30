@@ -8,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,13 +15,15 @@ public class MainActivity extends AppCompatActivity {
 
     static String inputIntervals;
 
-    private String interval_1 = "";
-    private String interval_2 = "";
-    private String interval_3 = "";
-    private String interval_4 = "";
-    private String interval_5 = "";
-    private String interval_6 = "";
-    private String interval_7 = "";
+    static String interval_1;
+    static String interval_2;
+    static String interval_3;
+    static String interval_4;
+    static String interval_5;
+    static String interval_6;
+    static String interval_7;
+
+    static int selectedId_4;
 
     private RadioGroup intervalsGroup_1;
     private RadioGroup intervalsGroup_2;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton intervalsButton_1;
     private RadioButton intervalsButton_2;
     private RadioButton intervalsButton_3;
-    private RadioButton intervalsButton_4;
+    static RadioButton intervalsButton_4;
     private RadioButton intervalsButton_5;
     private RadioButton intervalsButton_6;
     private RadioButton intervalsButton_7;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         int selectedId_1 = intervalsGroup_1.getCheckedRadioButtonId();
         int selectedId_2 = intervalsGroup_2.getCheckedRadioButtonId();
         int selectedId_3 = intervalsGroup_3.getCheckedRadioButtonId();
-        int selectedId_4 = intervalsGroup_4.getCheckedRadioButtonId();
+        selectedId_4 = intervalsGroup_4.getCheckedRadioButtonId();
         int selectedId_5 = intervalsGroup_5.getCheckedRadioButtonId();
         int selectedId_6 = intervalsGroup_6.getCheckedRadioButtonId();
         int selectedId_7 = intervalsGroup_7.getCheckedRadioButtonId();
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         interval_3 = intervalsButton_3.getText().toString();
 
 
-        // buttons 4, 5,6 and 7 must be tapped in this order. Otherwise they must be cleared
+        // buttons 4,5,6 and 7 must be tapped in this order. Otherwise they must be cleared
         if (selectedId_4 == -1) {
             interval_4 = "";
 
@@ -126,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
         this.inputIntervals = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
 
     }
@@ -145,6 +147,15 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.show_scales_hexatonic) {
+            getRadioButtons();
+            findIntervals = new FindIntervals(inputIntervals);
+            Intent scales = new Intent(MainActivity.this, HexatonicView.class);
+            startActivity(scales);
+
+            return true;
+        }
+
         if (id == R.id.show_scales_heptatonic) {
             getRadioButtons();
             findIntervals = new FindIntervals(inputIntervals);

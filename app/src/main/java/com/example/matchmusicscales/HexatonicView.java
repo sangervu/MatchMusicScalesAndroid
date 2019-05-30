@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OctatonicView extends AppCompatActivity {
+public class HexatonicView extends AppCompatActivity {
 
     MusicScales scale = new MusicScales();
 
@@ -22,7 +22,6 @@ public class OctatonicView extends AppCompatActivity {
         setContentView(R.layout.view_scales);
 
         this.customSimpleAdapterListView();
-
     }
 
     // This method shows how to customize SimpleAdapter to show image and text in ListView.
@@ -30,10 +29,9 @@ public class OctatonicView extends AppCompatActivity {
         setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
-        String interval[] = FindIntervals.myIntervalsCleanedForOcta;
+        String interval[] = FindIntervals.myIntervalsCleanedForHexa;
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
-        ;
 
         int titleLen = interval.length;
         for (int i = 0; i < titleLen; i++) {
@@ -54,7 +52,7 @@ public class OctatonicView extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
                 Object clickItemObj = adapterView.getAdapter().getItem(index);
-                Toast.makeText(OctatonicView.this, "You clicked " + clickItemObj.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(HexatonicView.this, "You clicked " + clickItemObj.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

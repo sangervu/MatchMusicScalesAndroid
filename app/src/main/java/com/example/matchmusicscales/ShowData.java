@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -11,13 +13,17 @@ import android.widget.ListView;
 public class ShowData extends AppCompatActivity {
 
     ListView simpleList;
-    String scaleListArray[]; // = {"Dorian", "Lydian", "Mixolydian", "Ionian", "Locrian", "Aeolian"};
+    String scaleListArray[];
+
+    private String interval_4 = "";
 
     private TextView dataText1;
     private TextView dataText2;
     private TextView dataText3;
     private TextView dataText4;
     private ListView listView1;
+    private RadioGroup intervalsGroup_4;
+    private RadioButton intervalsButton_4;
 
     String[] intervalListArray;
 
@@ -35,14 +41,14 @@ public class ShowData extends AppCompatActivity {
         setSupportActionBar(toolbarData);
 
         dataText1.setText(MainActivity.inputIntervals);
-        dataText2.setText("koe1");
-        dataText3.setText("koe2");
+        dataText2.setText(MainActivity.interval_4);
+        dataText3.setText(MainActivity.intervalsButton_4.getText().toString());
         dataText4.setText("koe3");
 
         scaleListArray = FindIntervals.myIntervalsCleanedForHepta;
 
         simpleList = (ListView)findViewById(R.id.dataListView);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textView, scaleListArray);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textListView, scaleListArray);
         simpleList.setAdapter(arrayAdapter);
     }
 }
