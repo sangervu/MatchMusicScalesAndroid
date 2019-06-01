@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+
         if (id == R.id.show_scales_hexatonic) {
             getRadioButtons();
             findIntervals = new FindIntervals(inputIntervals);
