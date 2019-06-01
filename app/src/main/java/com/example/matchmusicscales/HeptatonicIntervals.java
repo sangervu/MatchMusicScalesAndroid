@@ -6,15 +6,8 @@ import java.util.Collections;
 
 public class HeptatonicIntervals {
 
-    /**
-     *
-     */
     public static LinkedHashSet<String> hashList;
     private String[] heptatonicIntervals = new String[7];
-
-    /**
-     *
-     */
     public String[] heptatonicIntervalsAll = new String[1791];
     //public String[] myIntervalsCleaned = new String[54612];
 
@@ -27,10 +20,6 @@ public class HeptatonicIntervals {
 
     static int charCounter = -1;
 
-    /**
-     *
-     * @param intervallit
-     */
     public void setHeptatonicInterval(String intervallit) {
 
         charCounter = charCounter + 1;
@@ -38,11 +27,6 @@ public class HeptatonicIntervals {
 
     }
 
-    /**
-     *
-     * @param intervalCount
-     * @return
-     */
     public String[] getAllHeptatonicIntervals(String intervalCount) {
 
         int scaleCounter;

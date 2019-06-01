@@ -261,7 +261,7 @@ public class FindIntervals {
 
                 break;
 
-            case 7: //annettu seitemän intervallia (OK)
+            case 7: //annettu seitemän intervallia
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
