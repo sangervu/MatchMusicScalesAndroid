@@ -31,7 +31,6 @@ public class HeptatonicView extends AppCompatActivity {
 
         MusicScales musicScales = new MusicScales();
         String interval[] = FindIntervals.myIntervalsCleanedForHepta;
-        //String[] interval = {"WWHWWWH", "HWWWWHW", "WWWWHWH", "WWWHWHW", "WWHWHWW", "WHWHWWW", "HWHWWWW"};
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 

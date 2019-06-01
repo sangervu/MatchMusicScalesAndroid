@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (selectedId_5 == -1) {
-            interval_5 = "";
+            interval_5 = " ";
         } else {
             intervalsButton_5 = (RadioButton) findViewById(selectedId_5);
             interval_5 = intervalsButton_5.getText().toString();
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             if (selectedId_4 == -1) {
                 RadioGroup radioGroup_5 = (RadioGroup) findViewById(R.id.IntervalGroup_5);
                 radioGroup_5.clearCheck();
-                interval_5 = "";
+                interval_5 = " ";
             }
         }
 
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             if (selectedId_4 == -1 || selectedId_5 == -1) {
                 RadioGroup radioGroup_6 = (RadioGroup) findViewById(R.id.IntervalGroup_6);
                 radioGroup_6.clearCheck();
-                interval_6 = "";
+                interval_6 = " ";
             }
         }
 
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             if (selectedId_4 == -1 || selectedId_5 == -1 || selectedId_6 == -1) {
                 RadioGroup radioGroup_7 = (RadioGroup) findViewById(R.id.IntervalGroup_7);
                 radioGroup_7.clearCheck();
-                interval_7 = "";
+                interval_7 = " ";
             }
         }
 

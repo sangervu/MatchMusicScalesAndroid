@@ -346,7 +346,17 @@
                 android:checked="false"
                 android:focusable="true"
                 android:text="@string/M"
-                android:textSize="24sp" />
+                android:textSize="24sp"/>
+
+            <RadioButton
+                android:id="@+id/radioButton45"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:checked="true"
+                android:text=" "
+                android:visibility="invisible"
+                />
 
         </RadioGroup>
 
@@ -434,6 +444,15 @@
                 android:focusable="true"
                 android:text="@string/M"
                 android:textSize="24sp" />
+            <RadioButton
+                android:id="@+id/radioButton55"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:checked="true"
+                android:text=" "
+                android:visibility="invisible"
+                />
 
         </RadioGroup>
 
@@ -523,6 +542,16 @@
                 android:text="@string/M"
                 android:textSize="24sp" />
 
+            <RadioButton
+                android:id="@+id/radioButton65"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:checked="true"
+                android:text=" "
+                android:visibility="invisible"
+                />
+
         </RadioGroup>
 
     </LinearLayout>
@@ -609,6 +638,16 @@
                 android:focusable="true"
                 android:text="@string/M"
                 android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton75"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:checked="true"
+                android:text=" "
+                android:visibility="invisible"
+                />
 
         </RadioGroup>
 

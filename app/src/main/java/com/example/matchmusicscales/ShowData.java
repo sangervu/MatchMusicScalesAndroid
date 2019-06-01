@@ -41,8 +41,8 @@ public class ShowData extends AppCompatActivity {
         setSupportActionBar(toolbarData);
 
         dataText1.setText(MainActivity.inputIntervals);
-        dataText2.setText(MainActivity.interval_4);
-        dataText3.setText(MainActivity.intervalsButton_4.getText().toString());
+        //dataText2.setText(MainActivity.interval_4);
+        //dataText3.setText(MainActivity.intervalsButton_4.getText().toString());
         dataText4.setText("koe3");
 
         scaleListArray = FindIntervals.myIntervalsCleanedForHepta;
