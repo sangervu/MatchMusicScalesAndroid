@@ -219,8 +219,8 @@ public class FindIntervals {
                 for (int i = 0; i < intervallit.length(); i++) {
 
                     hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
-                    octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    //octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
 
                 //Hexatoniset asteikot
@@ -236,8 +236,8 @@ public class FindIntervals {
                 }*/
 
                 // Heptatoniset asteikeot
-                heptatonicIntervalsForAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
-                this.myIntervalsCleanedForHepta = intervalCheck2.getMyTrueScales(heptatonicIntervalsForAll);
+                //heptatonicIntervalsForAll = heptatonic.getAllHeptatonicIntervals(Integer.toString(intervallit.length()));
+                //this.myIntervalsCleanedForHepta = intervalCheck2.getMyTrueScales(heptatonicIntervalsForAll);
                 /*
                 System.out.println("Heptatoniset asteikot:");
                 for (String t : myIntervalsCleanedHepta6) {
@@ -248,8 +248,8 @@ public class FindIntervals {
                 }*/
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
-                this.myIntervalsCleanedForOcta = intervalCheck3.getMyTrueScales(octatonicIntervalsForAll);
+                //octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                //this.myIntervalsCleanedForOcta = intervalCheck3.getMyTrueScales(octatonicIntervalsForAll);
 
                 //System.out.println("Oktatoniset asteikot:");
                 /*for (String t : myIntervalsCleanedOcta) {

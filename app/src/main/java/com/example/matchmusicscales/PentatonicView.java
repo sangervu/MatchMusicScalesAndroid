@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HeptatonicView extends AppCompatActivity {
+public class PentatonicView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,11 @@ public class HeptatonicView extends AppCompatActivity {
 
     // This method shows how to customize SimpleAdapter to show image and text in ListView.
     private void customSimpleAdapterListView() {
-        //setTitle("Scales on Intervals");
+        setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
-        String interval[] = FindIntervals.myIntervalsCleanedForHepta;
+        //String interval[] = FindIntervals.myIntervalsCleanedForPenta;
+        String[] interval = {"MWHMH","HMWHM","HMHmW","HMHMW","mWWmW"};
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 
@@ -51,21 +52,9 @@ public class HeptatonicView extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
                 Object clickItemObj = adapterView.getAdapter().getItem(index);
-                Toast.makeText(HeptatonicView.this, "You clicked " + clickItemObj.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PentatonicView.this, "You clicked " + clickItemObj.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 }
-
-        /*
-        listView.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                String out = scale.getScales(((TextView) view).getText().toString());
-                // When clicked, show a toast with the TextView text
-                Toast.makeText(getApplicationContext(),out, Toast.LENGTH_LONG).show();
-            }
-        });
-        */

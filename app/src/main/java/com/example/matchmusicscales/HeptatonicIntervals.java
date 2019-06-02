@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class HeptatonicIntervals {
 
-    public static LinkedHashSet<String> hashList;
+    //public static LinkedHashSet<String> hashList;
     private String[] heptatonicIntervals = new String[7];
     public String[] heptatonicIntervalsAll = new String[1791];
     //public String[] myIntervalsCleaned = new String[54612];
@@ -15,8 +15,6 @@ public class HeptatonicIntervals {
     char W = 'W'; // Whole Step
     char m = 'm'; // minor 3rd
     char M = 'M'; // Major 3rd
-
-    String stringIntervals;
 
     static int charCounter = -1;
 

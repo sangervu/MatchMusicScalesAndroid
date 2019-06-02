@@ -14,8 +14,6 @@ import java.util.Map;
 
 public class HexatonicView extends AppCompatActivity {
 
-    MusicScales scale = new MusicScales();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +24,11 @@ public class HexatonicView extends AppCompatActivity {
 
     // This method shows how to customize SimpleAdapter to show image and text in ListView.
     private void customSimpleAdapterListView() {
-        setTitle("Scales on Intervals");
+        //setTitle("Hexatonic Scales");
 
         MusicScales musicScales = new MusicScales();
         String interval[] = FindIntervals.myIntervalsCleanedForHexa;
+        //String[] interval = {"WWWWWW","WWWmHW","HmWHmW","mHmHmH","HHHHHH"};
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 
@@ -45,7 +44,7 @@ public class HexatonicView extends AppCompatActivity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, itemDataList, R.layout.view_scales,
                 new String[]{"interval", "scale"}, new int[]{R.id.intervalsDesc, R.id.scaleDesc});
 
-        ListView listView = (ListView) findViewById(R.id.listViewExample);
+        ListView listView = (ListView) findViewById(R.id.listViewScales);
         listView.setAdapter(simpleAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

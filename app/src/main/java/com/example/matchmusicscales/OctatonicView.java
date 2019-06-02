@@ -47,7 +47,7 @@ public class OctatonicView extends AppCompatActivity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, itemDataList, R.layout.view_scales,
                 new String[]{"interval", "scale"}, new int[]{R.id.intervalsDesc, R.id.scaleDesc});
 
-        ListView listView = (ListView) findViewById(R.id.listViewExample);
+        ListView listView = (ListView) findViewById(R.id.listViewScales);
         listView.setAdapter(simpleAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
