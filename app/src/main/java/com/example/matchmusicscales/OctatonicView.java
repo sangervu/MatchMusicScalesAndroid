@@ -2,6 +2,7 @@ package com.example.matchmusicscales;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -14,20 +15,20 @@ import java.util.Map;
 
 public class OctatonicView extends AppCompatActivity {
 
-    MusicScales scale = new MusicScales();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_scales);
 
         this.customSimpleAdapterListView();
-
+        
+        Toolbar toolbarScales = findViewById(R.id.toolbar_scales);
+        setSupportActionBar(toolbarScales);
     }
 
     // This method shows how to customize SimpleAdapter to show image and text in ListView.
     private void customSimpleAdapterListView() {
-        setTitle("Scales on Intervals");
+        //setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
         String interval[] = FindIntervals.myIntervalsCleanedForOcta;

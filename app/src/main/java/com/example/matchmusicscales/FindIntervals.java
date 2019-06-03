@@ -15,6 +15,8 @@ public class FindIntervals {
     static String[] myIntervalsCleanedForOcta;
     static String[] octatonicIntervalsForAll;
 
+    static int intervalliLaskuri;
+
     FindIntervals(String intervallit) {
 
         char H = 'H'; //Half Step
@@ -23,7 +25,7 @@ public class FindIntervals {
         char M = 'M'; // Major 3rd
 
         //MusicScales scales = new MusicScales();
-        //PentatonicIntervals pentatonic = new PentatonicIntervals();
+        PentatonicIntervals pentatonic = new PentatonicIntervals();
         HexatonicIntervals hexatonic = new HexatonicIntervals();
         HeptatonicIntervals heptatonic = new HeptatonicIntervals();
         OctatonicIntervals octatonic = new OctatonicIntervals();
@@ -35,22 +37,23 @@ public class FindIntervals {
 
         //System.out.println("Syötä intervallit W, H, m, tai M (min kolme ja max kahdeksan intervallia)");
 
-        int intervalliLaskuri = intervallit.length();
+        this.intervalliLaskuri = intervallit.length();
 
         switch (intervalliLaskuri) {
 
             case 3: // annettu kolme intervallia
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
                     //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
                     //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
                     octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
-                /*
+
                 //Pentatoniset asteikot
-                String[] pentatonicIntervalsAll3 = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
-                String[] myIntervalsCleanedPenta3 = intervalCheck.getMyTrueScales(pentatonicIntervalsAll3);
+                String[] pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                this.myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
+                /*
                 System.out.println("Pentatoniset asteikot:");
                 for (String t : myIntervalsCleanedPenta3) {
                     System.out.println(t + " = " + scales.getScales(t));
@@ -100,15 +103,16 @@ public class FindIntervals {
             case 4: // annettu neljä intervallia (OK)
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
                     //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
                     //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
                     octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
-                /*
+
                 //Pentatoniset asteikot
-                String[] pentatonicIntervalsAll4 = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
-                String[] myIntervalsCleanedPenta4 = intervalCheck.getMyTrueScales(pentatonicIntervalsAll4);
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                this.myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
+                 /*
                 System.out.println("Pentatoniset asteikot:");
                 for (String t : myIntervalsCleanedPenta4) {
                     System.out.println(t + " = " + scales.getScales(t));
@@ -159,15 +163,16 @@ public class FindIntervals {
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
-                    //pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
+                    pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
                     //hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
                     //heptatonic.setHeptatonicInterval(String.valueOf(intervallit.charAt(i)));
                     octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
-                /*
+
                 //Pentatoniset asteikot
-                String[] pentatonicIntervalsAll5 = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
-                String[] myIntervalsCleanedPenta5 = intervalCheck.getMyTrueScales(pentatonicIntervalsAll5);
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                this.myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
+                /*
                 System.out.println("Pentatoniset asteikot:");
                 for (String t : myIntervalsCleanedPenta5) {
                     System.out.println(t + " = " + scales.getScales(t));

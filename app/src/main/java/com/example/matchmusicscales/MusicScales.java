@@ -1,8 +1,4 @@
 package com.example.matchmusicscales;
-/**
- *
- * @author angervuorisa
- */
 
 import java.util.HashMap;
 
@@ -13,14 +9,20 @@ public class MusicScales {
 
         HashMap<String, String> points = new HashMap<String, String>();
 
-        //pentatonic scales
-        points.put("MWHMH", "Hirajoshi scale");
-        points.put("HMWHM", "In scale");
-        points.put("HMHmW", "Insen scale");
-        points.put("HMHMW", "Iwato scale");
-        points.put("mWWmW", "Minor pentatonic scale");
+        //Pentatonic scales I
         points.put("WmWWm", "Yo scale");
+        points.put("mWWmW", "Minor pentatonic scale");
         points.put("WWmWm", "Major pentatonic scale");
+
+        //Pentatonic scales II
+        points.put("HMWHM", "In scale");
+        points.put("HMHMW", "Iwato scale");
+        points.put("MWHMH", "Hirajoshi scale");
+
+        //pentatonic scales III
+        points.put("HMHmW", "Insen scale");
+
+        //pentatonic scales IV
         points.put("HWHWH", "Istrian scale");
 
         //hexatonic scales

@@ -2,6 +2,7 @@ package com.example.matchmusicscales;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -19,6 +20,9 @@ public class PentatonicView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_scales);
 
+        Toolbar toolbarScales = findViewById(R.id.toolbar_scales);
+        setSupportActionBar(toolbarScales);
+
         this.customSimpleAdapterListView();
 
     }
@@ -28,8 +32,7 @@ public class PentatonicView extends AppCompatActivity {
         setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
-        //String interval[] = FindIntervals.myIntervalsCleanedForPenta;
-        String[] interval = {"MWHMH","HMWHM","HMHmW","HMHMW","mWWmW"};
+        String interval[] = FindIntervals.myIntervalsCleanedForPenta;
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 

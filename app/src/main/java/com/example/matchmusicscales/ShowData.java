@@ -4,11 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 public class ShowData extends AppCompatActivity {
 
@@ -30,22 +27,20 @@ public class ShowData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_data);
 
+        Toolbar toolbarData = findViewById(R.id.toolbar_data);
+        setSupportActionBar(toolbarData);
+
         dataText1 = (TextView) findViewById(R.id.textViewData1);
         dataText2 = (TextView) findViewById(R.id.textViewData2);
         dataText3 = (TextView) findViewById(R.id.textViewData3);
         dataText4 = (TextView) findViewById(R.id.textViewData4);
 
-        Toolbar toolbarData = findViewById(R.id.toolbar_data);
-        setSupportActionBar(toolbarData);
-
         dataText1.setText(MainActivity.inputIntervals);
         dataText2.setText(MainActivity.interval_4);
-        dataText3.setText(MainActivity.intervalsButton_4.getText().toString());
-        dataText4.setText("koe3");
+        dataText3.setText(Integer.toString(MainActivity.selectedId_4));
+        dataText4.setText(Integer.toString(FindIntervals.intervalliLaskuri));
 
-        HexatonicIntervals hex = new HexatonicIntervals();
-
-        scaleListArray = FindIntervals.myIntervalsCleanedForHexa;
+        scaleListArray = FindIntervals.myIntervalsCleanedForOcta;
 
         simpleList = (ListView)findViewById(R.id.dataListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textListView, scaleListArray);
