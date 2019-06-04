@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.show_data) {
 
             getRadioButtons();
-            findIntervals = new FindIntervals(inputIntervals);
+            //findIntervals = new FindIntervals(inputIntervals);
 
             Intent showData = new Intent(MainActivity.this, ShowData.class);
             startActivity(showData);
