@@ -16,20 +16,20 @@ import java.util.Map;
 public class PentatonicView extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_scales);
 
+        this.customSimpleAdapterListView();
+
         Toolbar toolbarScales = findViewById(R.id.toolbar_scales);
         setSupportActionBar(toolbarScales);
-
-        this.customSimpleAdapterListView();
 
     }
 
     // This method shows how to customize SimpleAdapter to show image and text in ListView.
     private void customSimpleAdapterListView() {
-        setTitle("Scales on Intervals");
+        //setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
         String interval[] = FindIntervals.myIntervalsCleanedForPenta;

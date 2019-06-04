@@ -2,6 +2,7 @@ package com.example.matchmusicscales;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -20,6 +21,9 @@ public class HeptatonicView extends AppCompatActivity {
         setContentView(R.layout.view_scales);
 
         this.customSimpleAdapterListView();
+
+        Toolbar toolbarScales = findViewById(R.id.toolbar_scales);
+        setSupportActionBar(toolbarScales);
 
     }
 
