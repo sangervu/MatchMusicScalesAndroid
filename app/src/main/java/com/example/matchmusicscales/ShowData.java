@@ -12,13 +12,10 @@ public class ShowData extends AppCompatActivity {
     ListView simpleList;
     String scaleListArray[];
 
-    private String interval_4 = "";
-
     private TextView dataText1;
     private TextView dataText2;
     private TextView dataText3;
     private TextView dataText4;
-
 
     String[] intervalListArray;
 
@@ -37,8 +34,8 @@ public class ShowData extends AppCompatActivity {
 
         dataText1.setText(MainActivity.inputIntervals);
         dataText2.setText(MainActivity.interval_4);
-        dataText3.setText(Integer.toString(MainActivity.selectedId_4));
-        dataText4.setText(Integer.toString(FindIntervals.intervalliLaskuri));
+        //dataText3.setText(Integer.toString(MainActivity.selectedId_4));
+        //dataText4.setText(Integer.toString(FindIntervals.intervalliLaskuri));
 
         //scaleListArray = FindIntervals.myIntervalsCleanedForOcta;
         String[] scaleListArray ={"hgshg","jhcgjhdg","kjdcjkwd"};

@@ -13,7 +13,6 @@ public class CheckIntervals {
 
     MusicScales scales = new MusicScales();
 
-
     public String[] getMyTrueScales(String[] intervals) {
 
         MusicScales scales = new MusicScales();
@@ -54,5 +53,15 @@ public class CheckIntervals {
         String[] myIntevalsCleanedAll = new String[hashList.size()];
         myIntervalsCleaned = hashList.toArray(myIntevalsCleanedAll);
         return myIntervalsCleaned;
+    }
+
+    //Tämä metodi ei ole käytössä (vielä)
+    public String[] getArrayCleared(String[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = null;
+        }
+
+        return array;
     }
 }

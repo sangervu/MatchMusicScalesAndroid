@@ -15,14 +15,27 @@ public class FindIntervals {
     static String[] myIntervalsCleanedForOcta;
     static String[] octatonicIntervalsForAll;
 
-    static int intervalliLaskuri;
+    private int intervalliLaskuri;
 
-    FindIntervals(String intervallit) {
+    public void setIntervals(String intervallit) {
 
         char H = 'H'; //Half Step
         char W = 'W'; // Whole Step
         char m = 'm'; // minor 3rd
         char M = 'M'; // Major 3rd
+
+        /*
+        CheckIntervals clear = new CheckIntervals();
+
+        clear.getArrayCleared(myIntervalsCleanedForPenta);
+        clear.getArrayCleared(myIntervalsCleanedForHexa);
+        clear.getArrayCleared(myIntervalsCleanedForHepta);
+        clear.getArrayCleared(myIntervalsCleanedForOcta);
+        clear.getArrayCleared(pentatonicIntervalsForAll);
+        clear.getArrayCleared(hexatonicIntervalsForAll);
+        clear.getArrayCleared(heptatonicIntervalsForAll);
+        clear.getArrayCleared(octatonicIntervalsForAll);
+        */
 
         //MusicScales scales = new MusicScales();
         PentatonicIntervals pentatonic = new PentatonicIntervals();
@@ -35,9 +48,7 @@ public class FindIntervals {
         CheckIntervals intervalCheck3 = new CheckIntervals();
         CheckIntervals intervalCheck4 = new CheckIntervals();
 
-        //System.out.println("Syötä intervallit W, H, m, tai M (min kolme ja max kahdeksan intervallia)");
-
-        this.intervalliLaskuri = intervallit.length();
+        intervalliLaskuri = intervallit.length();
 
         switch (intervalliLaskuri) {
 

@@ -11,8 +11,6 @@ import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
 
-    FindIntervals findIntervals;
-
     static String inputIntervals;
 
     static String interval_1;
@@ -22,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
     static String interval_5;
     static String interval_6;
     static String interval_7;
-
-    static int selectedId_4;
 
     private RadioGroup intervalsGroup_1;
     private RadioGroup intervalsGroup_2;
@@ -36,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton intervalsButton_1;
     private RadioButton intervalsButton_2;
     private RadioButton intervalsButton_3;
-    static RadioButton intervalsButton_4;
+    private RadioButton intervalsButton_4;
     private RadioButton intervalsButton_5;
     private RadioButton intervalsButton_6;
     private RadioButton intervalsButton_7;
@@ -64,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         int selectedId_1 = intervalsGroup_1.getCheckedRadioButtonId();
         int selectedId_2 = intervalsGroup_2.getCheckedRadioButtonId();
         int selectedId_3 = intervalsGroup_3.getCheckedRadioButtonId();
-        selectedId_4 = intervalsGroup_4.getCheckedRadioButtonId();
+        int selectedId_4 = intervalsGroup_4.getCheckedRadioButtonId();
         int selectedId_5 = intervalsGroup_5.getCheckedRadioButtonId();
         int selectedId_6 = intervalsGroup_6.getCheckedRadioButtonId();
         int selectedId_7 = intervalsGroup_7.getCheckedRadioButtonId();
@@ -127,9 +123,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        String inputIntervlsAll = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
+        String inputIntervalsAll = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
 
-        this.inputIntervals = inputIntervlsAll.replaceAll("\\s+", "");
+        this.inputIntervals = inputIntervalsAll.replaceAll("\\s+", "");
 
     }
 
@@ -147,10 +143,12 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        FindIntervals findIntervals = new FindIntervals();
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.show_scales_pentatonic) {
             getRadioButtons();
-            findIntervals = new FindIntervals(inputIntervals);
+            findIntervals.setIntervals(inputIntervals);
             Intent scales = new Intent(MainActivity.this, PentatonicView.class);
             startActivity(scales);
 
@@ -159,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.show_scales_hexatonic) {
             getRadioButtons();
-            findIntervals = new FindIntervals(inputIntervals);
+            findIntervals.setIntervals(inputIntervals);
             Intent scales = new Intent(MainActivity.this, HexatonicView.class);
             startActivity(scales);
 
@@ -168,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.show_scales_heptatonic) {
             getRadioButtons();
-            findIntervals = new FindIntervals(inputIntervals);
+            findIntervals.setIntervals(inputIntervals);
             Intent scales = new Intent(MainActivity.this, HeptatonicView.class);
             startActivity(scales);
 
@@ -177,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.show_scales_octatonic) {
             getRadioButtons();
-            findIntervals = new FindIntervals(inputIntervals);
+            findIntervals.setIntervals(inputIntervals);
             Intent scales = new Intent(MainActivity.this, OctatonicView.class);
             startActivity(scales);
 
@@ -202,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.show_data) {
 
             getRadioButtons();
-            //findIntervals = new FindIntervals(inputIntervals);
+            findIntervals.setIntervals(inputIntervals);
 
             Intent showData = new Intent(MainActivity.this, ShowData.class);
             startActivity(showData);
