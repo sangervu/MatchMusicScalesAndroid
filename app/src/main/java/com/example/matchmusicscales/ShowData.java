@@ -33,12 +33,12 @@ public class ShowData extends AppCompatActivity {
         dataText4 = (TextView) findViewById(R.id.textViewData4);
 
         dataText1.setText(MainActivity.inputIntervals);
-        dataText2.setText(MainActivity.interval_4);
-        //dataText3.setText(Integer.toString(MainActivity.selectedId_4));
+        dataText2.setText(Integer.toString(FindIntervals.intervalliLaskuri));
+        dataText3.setText(Integer.toString(FindIntervals.intervalliLaskuri));
         //dataText4.setText(Integer.toString(FindIntervals.intervalliLaskuri));
 
-        //scaleListArray = FindIntervals.myIntervalsCleanedForOcta;
-        String[] scaleListArray ={"hgshg","jhcgjhdg","kjdcjkwd"};
+        scaleListArray = FindIntervals.myIntervalsCleanedForOcta;
+        //String[] scaleListArray ={"hgshg","jhcgjhdg","kjdcjkwd"};
 
         simpleList = (ListView)findViewById(R.id.dataListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textListView, scaleListArray);

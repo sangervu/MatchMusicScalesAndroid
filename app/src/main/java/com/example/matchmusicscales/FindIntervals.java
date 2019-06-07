@@ -15,7 +15,7 @@ public class FindIntervals {
     static String[] myIntervalsCleanedForOcta;
     static String[] octatonicIntervalsForAll;
 
-    private int intervalliLaskuri;
+    static int intervalliLaskuri;
 
     public void setIntervals(String intervallit) {
 
@@ -53,6 +53,12 @@ public class FindIntervals {
         switch (intervalliLaskuri) {
 
             case 3: // annettu kolme intervallia
+
+                pentatonic.clearIntervals();
+                hexatonic.clearIntervals();
+                octatonic.clearIntervals();
+                heptatonic.clearIntervals();
+
                 for (int i = 0; i < intervallit.length(); i++) {
 
                     pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -79,6 +85,12 @@ public class FindIntervals {
                 break;
 
             case 4: // annettu neljä intervallia
+
+                pentatonic.clearIntervals();
+                hexatonic.clearIntervals();
+                octatonic.clearIntervals();
+                heptatonic.clearIntervals();
+
                 for (int i = 0; i < intervallit.length(); i++) {
 
                     pentatonic.setPentatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -105,6 +117,11 @@ public class FindIntervals {
                 break;
 
             case 5: //annettu viisi intervallia
+
+                pentatonic.clearIntervals();
+                hexatonic.clearIntervals();
+                octatonic.clearIntervals();
+                heptatonic.clearIntervals();
 
                 for (int i = 0; i < intervallit.length(); i++) {
 
@@ -133,6 +150,10 @@ public class FindIntervals {
 
             case 6: //annettu kuusi intervallia
 
+                hexatonic.clearIntervals();
+                octatonic.clearIntervals();
+                heptatonic.clearIntervals();
+
                 for (int i = 0; i < intervallit.length(); i++) {
 
                     hexatonic.setHexatonicInterval(String.valueOf(intervallit.charAt(i)));
@@ -154,6 +175,9 @@ public class FindIntervals {
                 break;
 
             case 7: //annettu seitemän intervallia
+
+                octatonic.clearIntervals();
+                heptatonic.clearIntervals();
 
                 for (int i = 0; i < intervallit.length(); i++) {
 

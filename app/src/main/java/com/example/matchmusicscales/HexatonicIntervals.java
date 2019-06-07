@@ -16,7 +16,14 @@ public class HexatonicIntervals {
     char m = 'm'; // minor 3rd
     char M = 'M'; // Major 3rd
 
-    static int charCounter = -1;
+    CheckIntervals empty = new CheckIntervals();
+    public void clearIntervals(){
+        empty.getArrayCleared(hexatonicIntervals);
+        empty.getArrayCleared(hexatonicIntervalsAll);
+        charCounter = -1;
+    };
+
+    private int charCounter = -1;
 
     public void setHexatonicInterval(String intervallit) {
 

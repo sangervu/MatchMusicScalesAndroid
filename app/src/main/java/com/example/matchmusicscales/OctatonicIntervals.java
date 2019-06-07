@@ -15,7 +15,14 @@ public class OctatonicIntervals {
     char m = 'm'; // minor 3rd
     char M = 'M'; // Major 3rd
 
-    static int charCounter = -1;
+    CheckIntervals empty = new CheckIntervals();
+    public void clearIntervals(){
+        empty.getArrayCleared(octatonicIntervals);
+        empty.getArrayCleared(octatonicIntervalsAll);
+        charCounter = -1;
+    };
+
+    private int charCounter = -1;
 
     public void setOctatonicInterval(String intervallit) {
         charCounter = charCounter + 1;

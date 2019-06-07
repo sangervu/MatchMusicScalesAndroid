@@ -19,8 +19,15 @@ public class PentatonicIntervals {
     char m = 'm'; // minor 3rd
     char M = 'M'; // Major 3rd
 
-    static int charCounter = -1;
-    static int scaleCounter = -1;
+    CheckIntervals empty = new CheckIntervals();
+    public void clearIntervals(){
+        empty.getArrayCleared(pentatonicIntervals);
+        empty.getArrayCleared(pentatonicIntervalsAll);
+        charCounter = -1;
+    };
+
+    private int charCounter = -1;
+    private int scaleCounter = -1;
 
     public void setPentatonicInterval(String intervallit) {
 
