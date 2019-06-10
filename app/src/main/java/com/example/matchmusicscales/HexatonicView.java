@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class HexatonicView extends AppCompatActivity {
 
+    private String interval[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,14 @@ public class HexatonicView extends AppCompatActivity {
         //setTitle("Hexatonic Scales");
 
         MusicScales musicScales = new MusicScales();
-        String interval[] = FindIntervals.myIntervalsCleanedForHexa;
-        //String[] interval = {"WWWWWW","WWWmHW","HmWHmW","mHmHmH","HHHHHH"};
+
+        if (FindIntervals.myIntervalsCleanedForHexa.length == 0) {
+            interval = FindIntervals.tyhjä;
+        }
+        else {
+
+            interval = FindIntervals.myIntervalsCleanedForHexa;
+        }
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 

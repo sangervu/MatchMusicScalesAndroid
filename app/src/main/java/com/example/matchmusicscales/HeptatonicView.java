@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class HeptatonicView extends AppCompatActivity {
 
+    private String interval[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,14 @@ public class HeptatonicView extends AppCompatActivity {
         //setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
-        String interval[] = FindIntervals.myIntervalsCleanedForHepta;
+
+        if (FindIntervals.myIntervalsCleanedForHepta.length == 0) {
+            interval = FindIntervals.tyhjä;
+        }
+        else {
+
+            interval = FindIntervals.myIntervalsCleanedForHepta;
+        }
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 

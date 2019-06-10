@@ -4,16 +4,18 @@ public class FindIntervals {
 
     //Pentatoniset asteikot
     static String[] myIntervalsCleanedForPenta;
-    static String[] pentatonicIntervalsForAll;
+    private String[] pentatonicIntervalsForAll;
     //Hexatoniset asetikot
     static String[] myIntervalsCleanedForHexa;
-    static String[] hexatonicIntervalsForAll;
+    private String[] hexatonicIntervalsForAll;
     //Henptatoniset asetikot
     static String[] myIntervalsCleanedForHepta;
-    static String[] heptatonicIntervalsForAll;
+    private String[] heptatonicIntervalsForAll;
     //Octatoniset asetikot
     static String[] myIntervalsCleanedForOcta;
-    static String[] octatonicIntervalsForAll;
+    private String[] octatonicIntervalsForAll;
+
+    static String[] tyhjä = {"There are no scales"};
 
     static int intervalliLaskuri;
 
@@ -24,18 +26,6 @@ public class FindIntervals {
         char m = 'm'; // minor 3rd
         char M = 'M'; // Major 3rd
 
-        /*
-        CheckIntervals clear = new CheckIntervals();
-
-        clear.getArrayCleared(myIntervalsCleanedForPenta);
-        clear.getArrayCleared(myIntervalsCleanedForHexa);
-        clear.getArrayCleared(myIntervalsCleanedForHepta);
-        clear.getArrayCleared(myIntervalsCleanedForOcta);
-        clear.getArrayCleared(pentatonicIntervalsForAll);
-        clear.getArrayCleared(hexatonicIntervalsForAll);
-        clear.getArrayCleared(heptatonicIntervalsForAll);
-        clear.getArrayCleared(octatonicIntervalsForAll);
-        */
 
         //MusicScales scales = new MusicScales();
         PentatonicIntervals pentatonic = new PentatonicIntervals();

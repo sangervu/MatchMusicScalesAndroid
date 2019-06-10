@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class PentatonicView extends AppCompatActivity {
 
+    private String interval[];
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,14 @@ public class PentatonicView extends AppCompatActivity {
         //setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
-        String interval[] = FindIntervals.myIntervalsCleanedForPenta;
+
+        if (FindIntervals.myIntervalsCleanedForPenta.length == 0) {
+            interval = FindIntervals.tyhjä;
+        }
+        else {
+
+            interval = FindIntervals.myIntervalsCleanedForPenta;
+        }
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
 

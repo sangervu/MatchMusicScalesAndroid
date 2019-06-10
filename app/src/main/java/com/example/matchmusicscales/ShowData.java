@@ -18,6 +18,7 @@ public class ShowData extends AppCompatActivity {
     private TextView dataText4;
 
     String[] intervalListArray;
+    String [] interval;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,24 @@ public class ShowData extends AppCompatActivity {
         dataText3 = (TextView) findViewById(R.id.textViewData3);
         dataText4 = (TextView) findViewById(R.id.textViewData4);
 
+
+        if (FindIntervals.myIntervalsCleanedForPenta.length == 0) {
+            interval = FindIntervals.tyhjä;
+        }
+        else {
+
+            interval = FindIntervals.myIntervalsCleanedForPenta;
+        }
+
+        scaleListArray = interval;
+
         dataText1.setText(MainActivity.inputIntervals);
         dataText2.setText(Integer.toString(FindIntervals.intervalliLaskuri));
         dataText3.setText(Integer.toString(FindIntervals.intervalliLaskuri));
         //dataText4.setText(Integer.toString(FindIntervals.intervalliLaskuri));
 
-        scaleListArray = FindIntervals.myIntervalsCleanedForOcta;
-        //String[] scaleListArray ={"hgshg","jhcgjhdg","kjdcjkwd"};
+        //scaleListArray = FindIntervals.myIntervalsCleanedForPenta;
+        //String[] scaleListArray ={"There are no scales"};
 
         simpleList = (ListView)findViewById(R.id.dataListView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textListView, scaleListArray);

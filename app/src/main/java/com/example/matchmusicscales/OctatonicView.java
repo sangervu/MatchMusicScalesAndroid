@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class OctatonicView extends AppCompatActivity {
 
+    private String interval[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,14 @@ public class OctatonicView extends AppCompatActivity {
         //setTitle("Scales on Intervals");
 
         MusicScales musicScales = new MusicScales();
-        String interval[] = FindIntervals.myIntervalsCleanedForOcta;
+
+        if (FindIntervals.myIntervalsCleanedForOcta.length == 0) {
+            interval = FindIntervals.tyhjä;
+        }
+        else {
+
+            interval = FindIntervals.myIntervalsCleanedForOcta;
+        }
 
         ArrayList<Map<String, Object>> itemDataList = new ArrayList<Map<String, Object>>();
         ;
