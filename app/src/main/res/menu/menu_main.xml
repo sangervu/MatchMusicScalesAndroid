@@ -6,15 +6,15 @@
     <item
         android:id="@+id/show_scales_pentatonic"
         android:orderInCategory="100"
-        android:title="@string/show_scales_pentatatonic" />
+        android:title="@string/show_scales_pentatatonic"/>
     <item
         android:id="@+id/show_scales_hexatonic"
         android:orderInCategory="100"
-        android:title="@string/show_scales_hexatonic" />
+        android:title="@string/show_scales_hexatonic"/>
     <item
         android:id="@+id/show_scales_heptatonic"
         android:orderInCategory="100"
-        android:title="@string/show_scales_heptatonic" />
+        android:title="@string/show_scales_heptatonic"/>
     <item
         android:id="@+id/show_scales_octatonic"
         android:orderInCategory="100"

@@ -1,4 +1,6 @@
 package com.example.matchmusicscales;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class FindIntervals {
 
@@ -18,6 +20,11 @@ public class FindIntervals {
     static String[] tyhjä = {"There are no scales"};
 
     static int intervalliLaskuri;
+
+    MenuItem menuItemPentatonic;
+    MenuItem menuItemHexatonic;
+    MenuItem menuItemHepatatonic;
+
 
     public void setIntervals(String intervallit) {
 

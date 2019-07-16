@@ -4,12 +4,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private Menu menu;
 
     static String inputIntervals;
 
@@ -44,6 +49,26 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbarMain = findViewById(R.id.toolbarMain);
         setSupportActionBar(toolbarMain);
+
+        RadioGroup intervalGroup6 = (RadioGroup) findViewById(R.id.IntervalGroup_6);
+        RadioGroup intervalGroup7 = (RadioGroup) findViewById(R.id.IntervalGroup_7);
+
+        intervalGroup6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                updateMenuItemDisable(R.id.show_scales_pentatonic);
+                //Toast.makeText(MainActivity.this, String.valueOf(checkedId), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        intervalGroup7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                updateMenuItemDisable(R.id.show_scales_hexatonic);
+                //Toast.makeText(MainActivity.this, String.valueOf(checkedId), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     protected void getRadioButtons() {
@@ -125,19 +150,25 @@ public class MainActivity extends AppCompatActivity {
 
         String inputIntervalsAll = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
 
+
+        // poista tyhjät "*" merkit pois
         this.inputIntervals = inputIntervalsAll.replaceAll("\\s+", "");
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        this.menu = menu;
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -151,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
             findIntervals.setIntervals(inputIntervals);
             Intent scales = new Intent(MainActivity.this, PentatonicView.class);
             startActivity(scales);
-
             return true;
         }
 
@@ -194,12 +224,15 @@ public class MainActivity extends AppCompatActivity {
             radioGroup_6.clearCheck();
             radioGroup_7.clearCheck();
 
+            updateMenuItemEnable(R.id.show_scales_pentatonic);
+            updateMenuItemEnable(R.id.show_scales_hexatonic);
+
             return true;
         }
 
         if (id == R.id.show_data) {
 
-            getRadioButtons();
+            //getRadioButtons();
             findIntervals.setIntervals(inputIntervals);
 
             Intent showData = new Intent(MainActivity.this, ShowData.class);
@@ -213,7 +246,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-}
+    private void updateMenuItemDisable(int MenuItem) {
+        MenuItem disableMenuItem = menu.findItem(MenuItem);
+        disableMenuItem.setEnabled(false);
 
-   /*Toast.makeText(MainActivity.this,
-                String.valueOf(selectedId_4), Toast.LENGTH_SHORT).show();*/
+    }
+
+    private void updateMenuItemEnable(int MenuItem) {
+        MenuItem enableMenuItem = menu.findItem(MenuItem);
+        enableMenuItem.setEnabled(true);
+
+    }
+
+}
