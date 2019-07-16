@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.show_data) {
 
-            //getRadioButtons();
+            getRadioButtons();
             findIntervals.setIntervals(inputIntervals);
 
             Intent showData = new Intent(MainActivity.this, ShowData.class);
