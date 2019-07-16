@@ -1,5 +1,7 @@
 package com.example.matchmusicscales;
 
+import android.text.TextUtils;
+
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -22,7 +24,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 2:
@@ -32,7 +34,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 3:
@@ -41,7 +43,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 4:
@@ -51,7 +53,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
             }
@@ -72,7 +74,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 2:
@@ -82,7 +84,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 3:
@@ -91,7 +93,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 4:
@@ -101,7 +103,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
             }
@@ -122,7 +124,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 2:
@@ -132,7 +134,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 3:
@@ -141,7 +143,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
                 case 4:
@@ -151,7 +153,7 @@ public class IntervalGenerator {
                         scaleCounter = scaleCounter + 1;
                         //"rotate" the pentatoninIntervals Array
                         Collections.rotate(Arrays.asList(intervals), 1);
-                        newIntervals[scaleCounter] = String.join("", intervals);
+                        newIntervals[scaleCounter] = TextUtils.join("", intervals);
                     }
                     break;
             }

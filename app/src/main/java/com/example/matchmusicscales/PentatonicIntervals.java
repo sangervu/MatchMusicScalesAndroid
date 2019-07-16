@@ -1,5 +1,7 @@
 package com.example.matchmusicscales;
 
+import android.text.TextUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -86,7 +88,7 @@ public class PentatonicIntervals {
                 for (int i = 0; i <= 4; i++) {
                     //"rotate" the pentatoninIntervals Array
                     Collections.rotate(Arrays.asList(pentatonicIntervals), 1);
-                    pentatonicIntervalsAll[i] = String.join("", pentatonicIntervals);
+                    pentatonicIntervalsAll[i] = TextUtils.join("", pentatonicIntervals);
                 }
                 break;
         }

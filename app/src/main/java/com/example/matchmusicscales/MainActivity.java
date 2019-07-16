@@ -245,13 +245,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
-
+    //Tällä disabloidaan itemi MenuListalla
     private void updateMenuItemDisable(int MenuItem) {
         MenuItem disableMenuItem = menu.findItem(MenuItem);
         disableMenuItem.setEnabled(false);
 
     }
-
+    //Tällä enabloidaan itemi MenuListalla
     private void updateMenuItemEnable(int MenuItem) {
         MenuItem enableMenuItem = menu.findItem(MenuItem);
         enableMenuItem.setEnabled(true);

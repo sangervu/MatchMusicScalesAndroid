@@ -1,5 +1,7 @@
 package com.example.matchmusicscales;
 
+import android.text.TextUtils;
+
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Collections;
@@ -357,7 +359,7 @@ public class HeptatonicIntervals {
                 for (int i = 0; i <= 6; i++) {
                     //"rotate" the intervals Array
                     Collections.rotate(Arrays.asList(heptatonicIntervals), 1);
-                    heptatonicIntervalsAll[i] = String.join("", heptatonicIntervals);
+                    heptatonicIntervalsAll[i] = TextUtils.join("", heptatonicIntervals);
                 }
                 break;
         }
