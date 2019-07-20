@@ -29,13 +29,13 @@
     <string name="show_scales">Show Scales</string>
     <string name="clear_intervals">Clear Intervals</string>
 
-    <string name="show_data">Show Data</string>
+    <string name="show_data">Info on Application</string>
     <string name="textView1">TextView</string>
     <string name="textView2">TextView</string>
     <string name="textView3">TextView</string>
     <string name="textView4">TextView</string>
     <string name="octatonic_name">Octatonic Scales</string>
-    <string name="dataView_name">Show Internal Data</string>
+    <string name="dataView_name">Information on Appplication</string>
 
     <string name="show_scales_heptatonic">Heptatonic Scales</string>
     <string name="show_scales_ocatonic">Octatonic Scales</string>
@@ -44,4 +44,5 @@
     <string name="show_scales_hexatonic">Hexatonic Scales</string>
     <string name="hexatonic_name">Hexatonic Scales</string>
     <string name="pentatonic_name">Pentatonic Scales</string>
+    <string name="scales">Single Scale</string>
 </resources>

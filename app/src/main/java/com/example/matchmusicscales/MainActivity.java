@@ -4,12 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -163,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         this.menu = menu;
 
+        CheckBox checkBox = (CheckBox) menu.findItem(R.id.menuShowAllScales).getActionView();
+        checkBox.setText("Show All Scales");
         return true;
     }
 
