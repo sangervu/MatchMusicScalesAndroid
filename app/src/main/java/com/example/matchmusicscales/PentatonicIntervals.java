@@ -22,11 +22,14 @@ public class PentatonicIntervals {
     char M = 'M'; // Major 3rd
 
     CheckIntervals empty = new CheckIntervals();
-    public void clearIntervals(){
+
+    public void clearIntervals() {
         empty.getArrayCleared(pentatonicIntervals);
         empty.getArrayCleared(pentatonicIntervalsAll);
         charCounter = -1;
-    };
+    }
+
+    ;
 
     private int charCounter = -1;
     private int scaleCounter = -1;
@@ -38,60 +41,90 @@ public class PentatonicIntervals {
 
     }
 
-    public String[] getAllPentatonicIntervals(String intervalCount) {
+    public String[] getAllPentatonicIntervals(String intervalCount, boolean isAllScales) {
 
         IntervalGenerator gen = new IntervalGenerator();
+        if (isAllScales) {
 
-        switch (intervalCount) {
+            switch (intervalCount) {
 
-            case "3": //intervalleja kolme
+                case "3": //intervalleja kolme
 
-                for (int counterOut = 0; counterOut <= 4; counterOut++) {
-                    switch (counterOut) {
-                        case 1:
-                            pentatonicIntervals[3] = String.valueOf(W);
+                    for (int counterOut = 0; counterOut <= 4; counterOut++) {
+                        switch (counterOut) {
+                            case 1:
+                                pentatonicIntervals[3] = String.valueOf(W);
 
-                            this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
+                                pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
+                                scaleCounter = gen.getScaleCounter();
 
-                            break;
-                        case 2:
-                            pentatonicIntervals[3] = String.valueOf(H);
+                                break;
+                            case 2:
+                                pentatonicIntervals[3] = String.valueOf(H);
 
-                            this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
+                                pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
+                                scaleCounter = gen.getScaleCounter();
 
-                            break;
-                        case 3:
-                            pentatonicIntervals[3] = String.valueOf(m);
+                                break;
+                            case 3:
+                                pentatonicIntervals[3] = String.valueOf(m);
 
-                            this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
-                            break;
-                        case 4:
-                            pentatonicIntervals[3] = String.valueOf(M);
+                                pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
+                                scaleCounter = gen.getScaleCounter();
+                                break;
+                            case 4:
+                                pentatonicIntervals[3] = String.valueOf(M);
 
-                            this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
-                            scaleCounter = gen.getScaleCounter();
-                            break;
+                                pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
+                                scaleCounter = gen.getScaleCounter();
+                                break;
+                        }
                     }
-                }
-                break;
+                    invertUsingCollectionsReverse(pentatonicIntervalsAll);
+                    break;
 
-            case "4": //intervalleja neljä
+                case "4": //intervalleja neljä
 
-                this.pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
-                scaleCounter = gen.getScaleCounter();
-                break;
+                    pentatonicIntervalsAll = gen.getFifthIntervals(pentatonicIntervals, scaleCounter);
+                    scaleCounter = gen.getScaleCounter();
+                    invertUsingCollectionsReverse(pentatonicIntervalsAll);
+                    break;
 
-            case "5": //intervalleja viisi
-                for (int i = 0; i <= 4; i++) {
-                    //"rotate" the pentatoninIntervals Array
-                    Collections.rotate(Arrays.asList(pentatonicIntervals), 1);
-                    pentatonicIntervalsAll[i] = TextUtils.join("", pentatonicIntervals);
-                }
-                break;
+                case "5": //intervalleja viisi
+                    for (int i = 0; i <= 4; i++) {
+                        //"rotate" the pentatoninIntervals Array
+                        Collections.rotate(Arrays.asList(pentatonicIntervals), 1);
+                        pentatonicIntervalsAll[i] = TextUtils.join("", pentatonicIntervals);
+                    }
+                    invertUsingCollectionsReverse(pentatonicIntervalsAll);
+                    break;
+            }
+        } else if (!isAllScales) {
+
+            switch (intervalCount) {
+
+                case "3": //intervalleja kolme
+
+
+                    break;
+
+                case "4": //intervalleja neljä
+
+
+                    break;
+
+                case "5": //intervalleja viisi (OK)
+
+                        pentatonicIntervalsAll[0] = TextUtils.join("", pentatonicIntervals);
+
+                    break;
+            }
         }
         return pentatonicIntervalsAll;
+    }
+
+    private void invertUsingCollectionsReverse(Object[] array) {
+        List<Object> list = Arrays.asList(array);
+        Collections.reverse(list);
     }
 }

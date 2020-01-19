@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton intervalsButton_5;
     private RadioButton intervalsButton_6;
     private RadioButton intervalsButton_7;
+
+    public static boolean isCheckedAllScales = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
 
         String inputIntervalsAll = interval_1 + interval_2 + interval_3 + interval_4 + interval_5 + interval_6 + interval_7;
 
-
         // poista tyhjät "*" merkit pois
         this.inputIntervals = inputIntervalsAll.replaceAll("\\s+", "");
 
@@ -162,8 +164,24 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         this.menu = menu;
 
-        CheckBox checkBox = (CheckBox) menu.findItem(R.id.menuShowAllScales).getActionView();
+        CheckBox checkBox = (CheckBox) menu.findItem(R.id.menuShowAllScalesChecked).getActionView();
         checkBox.setText("Show All Scales");
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if ( isChecked )
+                {
+                    isCheckedAllScales = true;
+                }
+                else if(!isChecked){
+
+                    isCheckedAllScales = false;
+                }
+            }
+        });
+
         return true;
     }
 

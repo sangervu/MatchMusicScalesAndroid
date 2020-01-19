@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Collections;
+import java.util.List;
 
 public class HexatonicIntervals {
 
@@ -38,6 +39,8 @@ public class HexatonicIntervals {
 
         int scaleCounter;
         IntervalGenerator gen = new IntervalGenerator();
+
+        if (MainActivity.isCheckedAllScales) {
 
         switch (intervalCount) {
 
@@ -78,7 +81,7 @@ public class HexatonicIntervals {
                                         break;
                                 }
                             }
-
+                            invertUsingCollectionsReverse(hexatonicIntervalsAll);
                             break;
                         case 2:
                             hexatonicIntervals[3] = String.valueOf(H);
@@ -237,7 +240,17 @@ public class HexatonicIntervals {
                 }
                 break;
         }
+
+        } else if (!MainActivity.isCheckedAllScales) {
+
+
+        }
         return hexatonicIntervalsAll;
+    }
+
+    private void invertUsingCollectionsReverse(Object[] array) {
+        List<Object> list = Arrays.asList(array);
+        Collections.reverse(list);
     }
 
 }

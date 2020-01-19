@@ -3,6 +3,7 @@ package com.example.matchmusicscales;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ArrayAdapter;
@@ -47,7 +48,12 @@ public class ShowData extends AppCompatActivity {
         dataText1.setText(MainActivity.inputIntervals);
         dataText2.setText(Integer.toString(FindIntervals.intervalliLaskuri));
         dataText3.setText(Integer.toString(FindIntervals.intervalliLaskuri));
-        //dataText4.setText(Integer.toString(FindIntervals.intervalliLaskuri));
+
+       if(MainActivity.isCheckedAllScales){
+
+       //dataText4.setText(Boolean.toString(checkBox.isChecked()));
+       dataText4.setText("CheckBox in Menu selected");
+      }
 
         //scaleListArray = FindIntervals.myIntervalsCleanedForPenta;
         //String[] scaleListArray ={"There are no scales"};

@@ -21,6 +21,8 @@ public class FindIntervals {
 
     static int intervalliLaskuri;
 
+    boolean isCheckedAllScales = MainActivity.isCheckedAllScales;
+
     MenuItem menuItemPentatonic;
     MenuItem menuItemHexatonic;
     MenuItem menuItemHepatatonic;
@@ -64,7 +66,7 @@ public class FindIntervals {
                     octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 //Pentatoniset asteikot
-                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
 
                 //Hexatoniset asteikot
@@ -76,7 +78,7 @@ public class FindIntervals {
                 this.myIntervalsCleanedForHepta = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll);
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForOcta = intervalCheck4.getMyTrueScales(octatonicIntervalsForAll);
 
                 break;
@@ -96,7 +98,7 @@ public class FindIntervals {
                     octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 //Pentatoniset asteikot
-                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
 
                 //Hexatoniset asteikot
@@ -108,7 +110,7 @@ public class FindIntervals {
                 this.myIntervalsCleanedForHepta = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll);
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForOcta = intervalCheck4.getMyTrueScales(octatonicIntervalsForAll);
 
                 break;
@@ -128,7 +130,7 @@ public class FindIntervals {
                     octatonic.setOctatonicInterval(String.valueOf(intervallit.charAt(i)));
                 }
                 //Pentatoniset asteikot
-                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()));
+                pentatonicIntervalsForAll = pentatonic.getAllPentatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForPenta = intervalCheck1.getMyTrueScales(pentatonicIntervalsForAll);
 
                 //Hexatoniset asteikot
@@ -140,7 +142,7 @@ public class FindIntervals {
                 this.myIntervalsCleanedForHepta = intervalCheck3.getMyTrueScales(heptatonicIntervalsForAll);
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForOcta = intervalCheck4.getMyTrueScales(octatonicIntervalsForAll);
 
                 break;
@@ -166,7 +168,7 @@ public class FindIntervals {
                 this.myIntervalsCleanedForHepta = intervalCheck2.getMyTrueScales(heptatonicIntervalsForAll);
 
                 //Oktatoniset asteikot
-                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForOcta = intervalCheck3.getMyTrueScales(octatonicIntervalsForAll);
 
                 break;
@@ -186,7 +188,7 @@ public class FindIntervals {
                 this.myIntervalsCleanedForHepta = intervalCheck1.getMyTrueScales(heptatonicIntervalsForAll);
 
                 // Oktatoniset asteikot
-                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()));
+                octatonicIntervalsForAll = octatonic.getAllOctatonicIntervals(Integer.toString(intervallit.length()),isCheckedAllScales);
                 this.myIntervalsCleanedForOcta = intervalCheck2.getMyTrueScales(octatonicIntervalsForAll);
 
                 break;

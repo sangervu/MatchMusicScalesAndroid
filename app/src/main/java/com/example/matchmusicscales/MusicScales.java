@@ -32,6 +32,7 @@ public class MusicScales {
         points.put("mHmHmH", "Augmented scale");
         points.put("mWHHmW", "Blues scale");
         points.put("HHHHHH", "Chromatic scale");
+        points.put("WHHmWm", "Gospel scale");
 
         // Chromatic scale heptatonic
         points.put("HHHHHHH", "Chromatic scale");

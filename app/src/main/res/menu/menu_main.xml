@@ -4,8 +4,9 @@
     tools:context="com.example.matchmusicscales.MainActivity">
 
     <item
-        android:id="@+id/menuShowAllScales"
+        android:id="@+id/menuShowAllScalesChecked"
         android:checkable="true"
+        android:checked="true"
         android:enabled="true"
         android:title="@string/scales"
         android:visible="true"
